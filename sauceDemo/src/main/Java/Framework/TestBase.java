@@ -9,21 +9,24 @@ import org.openqa.selenium.WebDriver;
 public class TestBase extends DriverManager {
 
     private static WebDriver driver;
+    private static String URL = "https://www.saucedemo.com/";
 
-    private static final String URL = "https://www.saucedemo.com/";
+    public static WebDriver getDriverManager (){
 
-    public static WebDriver getDriverManager() {
         driver = getDriver(TypeBrowser.CHROME);
         return driver;
     }
 
     @BeforeEach
-    public void setUp() {
+    public void setUp(){
         getDriverManager().get(URL);
     }
 
     @AfterEach
-    public void finish() {
+    public void finish(){
         fecharDriver();
     }
+
+
+
 }

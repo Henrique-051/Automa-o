@@ -7,10 +7,11 @@ import org.openqa.selenium.WebElement;
 public class GenericPage {
 
     private WebDriver driver;
-    private GenericPage(WebDriver driver){
+
+    public GenericPage(WebDriver driver){
 
         this.driver = driver;
-}
+    }
 
     public WebElement getTextTitle(){
 
